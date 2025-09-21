@@ -1,9 +1,14 @@
 # IP finder! 
 # use this program to find an IP of any website
-#version 0.1
+# Now with GUI!
+#version 0.3
 
 import socket
+import tkinter 
 import sys
+
+# Windoe creation
+win = tkinter.Tk()
 
 # socket creation
 try:
@@ -28,3 +33,5 @@ s.connect((host_ip, port))
 
 print("the socket has successfully connected!")
 print(host_ip)
+
+win.mainloop()
