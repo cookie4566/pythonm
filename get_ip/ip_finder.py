@@ -15,7 +15,10 @@ except socket.error as err:
 port = 80
 
 try:
-    host_ip = socket.gethostbyname('www.google.com')
+    print("Enter a domain for an IP search.")
+    print("Make sure you start with www and end with .com!")
+    web_site = input()
+    host_ip = socket.gethostbyname(web_site)
 except socket.gaierror:
     
     print ("error resolving to host")
