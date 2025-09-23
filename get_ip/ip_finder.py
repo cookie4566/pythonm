@@ -4,11 +4,11 @@
 #version 0.3
 
 import socket
-import tkinter 
+from tkinter import *
 import sys
 
 # Windoe creation
-win = tkinter.Tk()
+win = Tk()
 
 # socket creation
 try:
@@ -18,6 +18,11 @@ except socket.error as err:
      print("socket creation failed with error %s" %(err))
 # default socket port
 port = 80
+
+#entry field for domain with label
+ip_label = Label(win, text='Website').grid(row = 0)
+ip_entry = Entry(win).grid(row = 0, column = 1)
+
 
 try:
     print("Enter a domain for an IP search.")
