@@ -22,6 +22,7 @@ port = 80
 #entry field for domain with label
 ip_label = Label(win, text='Website').grid(row = 0)
 ip_entry = Entry(win).grid(row = 0, column = 1)
+ip_button = Button(win, text='Find IP address').grid(row=0, column=2)
 
 
 try:
