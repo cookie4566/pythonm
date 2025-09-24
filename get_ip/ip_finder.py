@@ -22,6 +22,9 @@ port = 80
 #entry field for domain with label
 ip_label = Label(win, text='Website').grid(row = 0)
 ip_entry = Entry(win).grid(row = 0, column = 1)
+ip_button = Button(win, text='Find IP address').grid(row=0,column=2)
+# Displaying message onto window instead of terminal via print()
+
 
 
 try:
@@ -29,6 +32,7 @@ try:
     print("Make sure you start with www and end with .com!")
     web_site = input()
     host_ip = socket.gethostbyname(web_site)
+    win.destroy
 except socket.gaierror:
     
     print ("error resolving to host")
