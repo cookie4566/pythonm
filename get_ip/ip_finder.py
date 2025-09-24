@@ -23,6 +23,7 @@ port = 80
 ip_label = Label(win, text='Website').grid(row = 0)
 ip_entry = Entry(win).grid(row = 0, column = 1)
 ip_button = Button(win, text='Find IP address').grid(row=0, column=2)
+exit.button = Button(win, text='exit',command= win.destroy).grid(row=0, column=3)
 
 
 try:
