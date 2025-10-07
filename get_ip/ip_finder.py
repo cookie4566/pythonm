@@ -10,7 +10,7 @@ import sys
 # Windoe creation
 win = Tk()
 # string 
-
+ip_name_v = StringVar()
 # socket creation
 try:
      s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -21,7 +21,7 @@ except socket.error as err:
 port = 80
 
 def find_ip():
-    weba = ip_entry.get()
+    weba = ip_name_v.get()
     try:
         print("Enter a domain for an IP search.")
         print("Make sure you start with www and end with .com!")
@@ -37,7 +37,7 @@ def find_ip():
     print(host_ip)
 #nessacery widgets(entry field buttons and labels)
 ip_label = Label(win, text='Website').grid(row = 0)
-ip_entry = Entry(win).grid(row = 0, column = 1)
+ip_entry = Entry(win, textvariable= ip_name_v).grid(row = 0, column = 1)
 ip_button = Button(win, text='Find IP address', command=find_ip).grid(row=0, column=2)
 exit.button = Button(win, text='exit',command= win.destroy).grid(row=0, column=3)
 note_label = Label(win, text='Enter a domain for an IP search.').grid(row=1)
